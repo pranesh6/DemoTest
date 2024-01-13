@@ -14,6 +14,9 @@ function App() {
       <header className="App-header" data-testid="header-element">
         {state.call}
       </header>
+      <div
+        dangerouslySetInnerHTML={{__html: ''}}
+      />
     </div>
   );
 }
