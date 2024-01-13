@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   const [state, setState] = useState({ call: 1 });
   const tick = () => {
-    state.call += 
+    state.call += 1;
   }
   useEffect(() => {
     setInterval(() => tick(), 1000);
