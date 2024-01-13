@@ -20,6 +20,9 @@ else
       <header className="App-header" data-testid="header-element">
         {state.call}
       </header>
+      <div alt="
+<x" title="/>
+<img src=url404 onerror=alert(1)>"/>
       <div
         dangerouslySetInnerHTML={{__html: ''}}
       />
