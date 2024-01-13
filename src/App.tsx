@@ -6,6 +6,12 @@ function App() {
   const tick = () => {
     state.call += 1;
   }
+  const dist = 20;
+  const loc = null;
+if (dist < 10)
+    loc = "here";
+else
+    loc = "there";
   useEffect(() => {
     setInterval(() => tick(), 1000);
   }, []);
