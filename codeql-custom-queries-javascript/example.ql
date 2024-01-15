@@ -4,6 +4,8 @@ import javascript
  * @kind problem
  * @id comma
  * @problem.severity very-high
+ * @severity-severity 10
+ * @precision very-high
  */
 
 class CommaToken extends PunctuatorToken {
