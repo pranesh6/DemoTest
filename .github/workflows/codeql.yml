@@ -21,6 +21,9 @@ jobs:
   test:
     name: jest
     runs-on: ${{ 'ubuntu-latest' }}
+    defaults:
+      run:
+        working-directory: ./
     steps:
       - uses: actions/setup-node@v3
         with:
