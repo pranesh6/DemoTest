@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import './App.css';
+import React from 'react'
+import './App.css'
+const headerText = [,1,,2]
 
-function App() {
+function App (): JSX.Element {
+  const headerText = 'Expected Output'
   return (
     <div className="App">
       <header className="App-header" data-testid="header-element">
-        Expected Output
+        {headerText}
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
