@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header" data-testid="header-element">
-        Empty
+        Expected Output
       </header>
     </div>
   );
