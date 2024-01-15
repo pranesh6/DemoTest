@@ -10,8 +10,6 @@ import javascript
  * @security-severity 6.5
  * @precision high
  * @id cs/exposure-of-sensitive-information
- * @tags security
- *       external/cwe/cwe-359
  */
 
 
