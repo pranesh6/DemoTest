@@ -18,6 +18,15 @@ on:
     branches: [ "main" ]
 
 jobs:
+  test:
+    name: jest
+    runs-on: ${{ 'ubuntu-latest' }}
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - run: npm ci
+      - run: npm run test
   analyze:
     name: Analyze
     runs-on: ${{ 'ubuntu-latest' }}
