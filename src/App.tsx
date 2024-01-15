@@ -1,33 +1,25 @@
-import React, { useEffect, useState } from 'react';
-import './App.css';
+import React from 'react'
+import './App.css'
+import { Typography, Button } from '@mui/material'
+import { styled } from '@mui/material/styles';
 
-function App() {
-  const [state, setState] = useState({ call: 1 });
-  const tick = () => {
-    state.call += 1;
-  }
-  const dist = 20;
-  const loc = null;
-// if (dist < 10)
-//     loc = "here";
-// else
-//     loc = "there";
-  useEffect(() => {
-    setInterval(() => tick(), 1000);
-  }, []);
+const Div = styled('div')(({ theme }) => ({
+  ...theme.typography.button,
+  backgroundColor: theme.palette.background.paper,
+  padding: theme.spacing(1)
+}))
+
+const headerText = [,1,,3,,2]
+
+function App (): JSX.Element {
+  const headerText = 'Expected Output'
   return (
-    <div className="App">
-      <header className="App-header" data-testid="header-element">
-        {state.call}
-      </header>
-      <div alt="
-<x" title="/>
-<img src=url404 onerror=alert(1)>"/>
-      <div
-        dangerouslySetInnerHTML={{__html: ''}}
-      />
-    </div>
-  );
+    <Div>
+      <Typography variant='h1' data-testid="header-element">
+        {headerText}
+      </Typography>
+    </Div>
+  )
 }
 
-export default App;
+export default App
