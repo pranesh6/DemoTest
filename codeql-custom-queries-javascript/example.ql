@@ -1,5 +1,11 @@
 import javascript
 
+/**
+ * @kind problem
+ * @id comma
+ * @problem.severity very-high
+ */
+
 class CommaToken extends PunctuatorToken {
     CommaToken() {
         getValue() = ","
