@@ -33,7 +33,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run Dependabot security checks
-        run: npm audit --json > vulnerability.json || true
+        run: |
+          npm ci
+          npm audit --json > vulnerability.json || true
       - name: Check for Critical and High severity vulnerabilities 
         run: |
           CRITICAL_VULNERABILITIES=$(cat vulnerability.json | jq -r '.metadata.vulnerabilities.critical')
