@@ -28,6 +28,27 @@ jobs:
           node-version: '20'
       - run: npm ci
       - run: npm run lint
+  vulnerabilityCheck: 
+    name: vulnerability
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Dependabot security checks
+        run: npm audit --json > vulnerability.json || true
+      - name: Check for Critical and High severity vulnerabilities 
+        run: |
+          CRITICAL_VULNERABILITIES=$(cat vulnerability.json | jq -r '.metadata.vulnerabilities.critical')
+          HIGH_VULNERABILITIES=$(cat vulnerability.json | jq -r '.metadata.vulnerabilities.high')
+
+          if [ "$CRITICAL_VULNERABILITIES" -gt 2 ] || [ "$HIGH_VULNERABILITIES" -gt 2 ]; then
+            cat vulnerability.json
+            echo "Critical or high severity vulnerabilities exceed the allowed limit. Failed the deployment due to which exiting with deploying the application"
+            rm vulnerability.json
+            exit 1
+          else
+            echo "No critical or high severity vulnerabilities found. Continuing with the deployment."
+            cat vulnerability.json
+            rm vulnerability.json
+          fi
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
