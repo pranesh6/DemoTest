@@ -21,4 +21,4 @@ class CommaToken extends PunctuatorToken {
 
 from CommaToken comma
 where comma.getNextToken() instanceof CommaToken
-select comma,  "Omitted array elements are bad style." + comma.getLocation(), comma.getFile(), "Omitted array elements are bad style."
+select comma,  "Omitted array elements are bad style." + comma.getStartLine(), comma.getFile(), "Omitted array elements are bad style."
