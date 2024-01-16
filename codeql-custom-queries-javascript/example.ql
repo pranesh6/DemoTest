@@ -7,8 +7,8 @@ import javascript
  *              unauthorized persons.
  * @kind problem
  * @problem.severity error
- * @security-severity 6.5
- * @precision high
+ * @security-severity 10
+ * @precision very-high
  * @id cs/exposure-of-sensitive-information
  */
 
