@@ -9,7 +9,7 @@ const Div = styled('div')(({ theme }) => ({
   padding: theme.spacing(1)
 }))
 
-const headerText = [,1,,,3,,2]
+const headerText = [,1,,3,,2]
 
 function App (): JSX.Element {
   const headerText = 'Expected'
