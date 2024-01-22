@@ -2,9 +2,8 @@ import javascript
 
 
 /**
- * @name Exposure of private information
- * @description If private information is written to an external location, it may be accessible by
- *              unauthorized persons.
+ * @name Omitted Array Elements
+ * @description Unwanted array elements should be removed.
  * @kind problem
  * @problem.severity error
  * @security-severity 10
